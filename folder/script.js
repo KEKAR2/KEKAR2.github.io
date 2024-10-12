@@ -114,6 +114,7 @@ rainbowText();
 
 function indexCheck(index) {
 
+    const photosSection = document.querySelector('.photos-section ').querySelector('img');
     const forAddingText = document.querySelector('.for-adding-text');
 
     const p = document.createElement('p');
@@ -123,6 +124,7 @@ function indexCheck(index) {
 
     createdTag.classList.add('added-text');
     createdTag.classList.add('rainbow-text');
+
 
     switch (index) {
         case 16:
@@ -141,9 +143,17 @@ function indexCheck(index) {
             createdTag.innerHTML ='День, когда мы познакомились';
             rainbowText()
             break;
-    
+        case 12:
+
+            createdTag.innerHTML ='Как был пидорам так и остался';
+            rainbowText()
+            break;
+        case 14:
+            photosSection.style.width = '1000px';
+            break;
         default:
             forAddingText.innerHTML = "";
+            photosSection.style.width = '550px';
             break;
     }
         
