@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -27,6 +29,10 @@ video {
     height: 500px;
 }
 
+.hidden {
+    display: none;
+}
+
 .stretched-button-forward, .stretched-button-back {
     height: 200px; 
     width: 50px; 
@@ -51,6 +57,19 @@ video {
     text-align: center;
 }
 
+.rainbow-text {
+    font-size: 35px;
+    word-break: break-word;
+}
 
+.for-adding-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
 
-  
+.added-text {
+    margin: 0;
+    padding: 0;
+}
