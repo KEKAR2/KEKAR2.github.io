@@ -127,34 +127,65 @@ function indexCheck(index) {
 
 
     switch (index) {
-        case 16:
-    
-            createdTag.innerHTML ='Классика';
-            
-            rainbowText()
-            break;
+        
         case 10:
 
-            createdTag.innerHTML ='День, когда мы залезли в дискорд';
-            rainbowText()
+            createdTag.innerHTML = "";
+             createdTag.innerHTML ='День, когда мы залезли в дискорд';
             break;
         case 11:
 
-            createdTag.innerHTML ='День, когда мы познакомились';
-            rainbowText()
+            createdTag.innerHTML = "";
+             createdTag.innerHTML ='День, когда мы познакомились';
             break;
-        case 12:
 
-            createdTag.innerHTML ='Как был пидорам так и остался';
-            rainbowText()
+        case 12:
+            createdTag.innerHTML = "";
+            createdTag.innerHTML ='Я как был пидорам так и остался';
             break;
+
+        case 13:
+            createdTag.innerHTML = "";
+            photosSection.style.width = '550px';
+            createdTag.innerHTML ='По моему ты что-то знал ещё в 2018';
+            break;
+
         case 14:
+            createdTag.innerHTML = "";
             photosSection.style.width = '1000px';
             break;
+
+        case 15:
+            forAddingText.innerHTML = "";
+            photosSection.style.width = '550px';
+            break;
+
+        case 16:
+            createdTag.innerHTML = "";
+            createdTag.innerHTML ='Классика';
+            
+            break;
+            
         default:
             forAddingText.innerHTML = "";
             photosSection.style.width = '550px';
             break;
     }
+
+    rainbowText()
         
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const figure = document.querySelector('#audioFigure');
+    const audio = document.querySelector('audio');
+
+    // Когда аудио начинает проигрываться
+    audio.addEventListener('play', function() {
+        // Убираем fullscreen и возвращаем к исходному виду
+        figure.classList.remove('fullscreen-figure');
+        figure.classList.add('minimized-figure');
+    });
+});
